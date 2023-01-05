@@ -58,6 +58,10 @@ public class Order {
     }
 
     public Double total(){
-        return 
+        double sum = 0.0;
+        for(OrderItem item: items){
+            sum+= item.subTotal();
+        }
+        return sum;
     }
 }
