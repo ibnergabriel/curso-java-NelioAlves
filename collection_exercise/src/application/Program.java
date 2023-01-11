@@ -1,9 +1,6 @@
 package application;
 
-import entities.Client;
-import entities.Order;
-import entities.OrderItem;
-import entities.OrderStatus;
+import entities.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,9 +34,32 @@ public class Program {
 
         System.out.println();
         System.out.print("How many items to this order? ");
-        int quantityItems = scanner.nextInt();
+        int n = scanner.nextInt();
 
+        for(int i=1; i<=n; i++){
+            System.out.println("Enter #" + i + " item data:");
+            System.out.print("Product name: ");
+            String productName = scanner.nextLine();
+            System.out.print("Price: ");
+            double productPrice = scanner.nextDouble();
+            System.out.print("Quantity: ");
+            int productQuantity = scanner.nextInt();
 
+            OrderItem orderItem = new OrderItem(productQuantity, productPrice, new Product(productName, productPrice));
+            order.addItem(orderItem);
+        }
+
+        System.out.println();
+        System.out.println("ORDER SUMMARY: ");
+        System.out.println("Order moment: " + order.getMoment());
+        System.out.println("Order status: " + order.getStatus());
+        System.out.println("Client: " + order.getClient());
+        System.out.println();
+        System.out.println("Order items: ");
+        System.out.println(order);
+        System.out.println(order);
+
+        scanner.close();
 
     }
 
