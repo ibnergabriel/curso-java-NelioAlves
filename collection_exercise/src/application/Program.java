@@ -55,11 +55,6 @@ public class Program {
 
         System.out.println();
         System.out.println("ORDER SUMMARY: ");
-        System.out.println("Order moment: " + order.getMoment());
-        System.out.println("Order status: " + order.getStatus());
-        System.out.println(client);
-        System.out.println();
-        System.out.println("Order items: ");
         System.out.println(order);
 
         scanner.close();

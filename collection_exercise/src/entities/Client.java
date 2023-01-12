@@ -45,7 +45,7 @@ public class Client {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Client: ").append(name).append(" (").append(sdf.format(birthDate)).append(") ")
+        sb.append(name).append(" (").append(sdf.format(birthDate)).append(") ")
                 .append("- ").append(email);
 
         return sb.toString();
